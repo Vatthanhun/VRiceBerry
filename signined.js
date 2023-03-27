@@ -26,3 +26,8 @@ function logout() {
     localStorage.removeItem("jwt")
     window.location.href = "./index.html"
 }
+
+const db = firebase.firestore()
+db.collection('DataUser').get().then((snapshot)=>{
+    console.log(snapshot.docs)
+})
